@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Navbar>
-        <h1>Home</h1>
+        <h1>New Home</h1>
         <ul>
           <Link to='/timer'>타이머</Link>
         </ul>
