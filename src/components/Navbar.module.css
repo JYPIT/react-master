@@ -1,0 +1,7 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #004ba0;
+  height: 3rem;
+  font-size: 30px;
+}

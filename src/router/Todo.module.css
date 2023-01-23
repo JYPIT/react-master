@@ -1,0 +1,37 @@
+:root {
+  --color-bg-dark: whitesmoke;
+  --color-text: black;
+  --color-accent: #ffa726;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(56, 207, 149);
+  background: radial-gradient(
+    circle,
+    rgba(56, 207, 149, 1) 0%,
+    rgba(87, 115, 255, 1) 100%
+  );
+}
+
+.todoBox {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff350;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 1rem;
+  box-shadow: 0px 23px 17px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 23px 17px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 23px 17px 5px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}

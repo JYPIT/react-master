@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../App.css';
-import Counter from './Counter';
+import CounterSub from './CounterSub';
 
 export default function CounterApp() {
   const [isShow, setIsShow] = useState(true);
@@ -13,8 +13,8 @@ export default function CounterApp() {
         {count > 5 ? '🔥' : '❄️'}
         <button onClick={() => setIsShow((prev) => !prev)}>Show</button>
       </div>
-      {isShow && <Counter total={count} onClick={handleClick} />}
-      {isShow && <Counter total={count} onClick={handleClick} />}
+      {isShow && <CounterSub total={count} onClick={handleClick} />}
+      {isShow && <CounterSub total={count} onClick={handleClick} />}
     </div>
   );
 }

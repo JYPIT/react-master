@@ -1,20 +1,28 @@
 import { useContext } from 'react';
 import { DarkModeContext } from '../context/DarkModeProvider';
+import styles from './Navbar.module.css';
+import { BsSun, BsMoon } from 'react-icons/bs';
 
 export default function Navbar({ children }) {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
-    <header style={{ background: 'bisque' }}>
+    <header className={styles.navbar}>
+      {children}
       <button onClick={toggleDarkMode}>
         {darkMode ? (
-          <span style={{ backgroundColor: 'yellow' }}>라이트 모드</span>
+          <span style={{ fontSize: '20px' }}>
+            <BsSun />
+          </span>
         ) : (
-          <span style={{ backgroundColor: 'navy', color: 'white' }}>
-            다크 모드
+          <span
+            style={{
+              fontSize: '20px',
+            }}
+          >
+            <BsMoon />
           </span>
         )}
       </button>
-      {children}
     </header>
   );
 }

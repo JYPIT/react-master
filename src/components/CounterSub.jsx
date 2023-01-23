@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Counter({ total, onClick }) {
+export default function CounterSub({ total, onClick }) {
   const [count, setCount] = useState(0);
   const onClickReset = () => setCount(0);
   return (

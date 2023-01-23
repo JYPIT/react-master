@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  accent-color: var(--color-accent);
+}
+.container {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.list::-webkit-scrollbar-track {
+  background-color: #fff350;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+}
+.list::-webkit-scrollbar-thumb:hover {
+  background-color: #ff8f00;
+}

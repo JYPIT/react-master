@@ -1,0 +1,23 @@
+.form {
+  width: 100%;
+  display: flex;
+  padding: 1rem 0.5rem;
+}
+
+.input {
+  flex: 1 0 auto;
+  font-size: 1.4rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.button {
+  background-color: #ff8f00;
+  font-size: 1.4rem;
+  padding: 0.2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
