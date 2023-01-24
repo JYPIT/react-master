@@ -2,9 +2,10 @@ import { useState } from 'react';
 import AddTodo from '../components/AddTodo';
 import WorkTodo from './WorkTodo';
 import styles from './TodoList.module.css';
+import { useEffect } from 'react';
 
 export default function TodoList({ filter }) {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(readTodosFromStorage);
   const handleAdd = (todo) => {
     setTodos([...todos, todo]);
   };
@@ -14,7 +15,9 @@ export default function TodoList({ filter }) {
     setTodos(todos.filter((todo) => todo.id !== deleted.id));
   };
   const filtered = getFilteredItems(todos, filter);
-
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
@@ -30,6 +33,11 @@ export default function TodoList({ filter }) {
       <AddTodo onAdd={handleAdd} />
     </div>
   );
+}
+
+function readTodosFromStorage() {
+  const localTodos = localStorage.getItem('todos');
+  return localTodos ? JSON.parse(localTodos) : [];
 }
 
 function getFilteredItems(todos, filter) {

@@ -1,10 +1,11 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 3rem;
   width: 100%;
-  background-color: #ffc107;
+  padding: 1.5rem 1rem;
+  background-color: var(--color-accent);
   border-bottom: 1px solid black;
 }
 
@@ -19,6 +20,7 @@
   margin: 0.3rem;
   background-color: transparent;
   opacity: 0.5;
+  color: var(--color-text);
 }
 
 .filter:hover,

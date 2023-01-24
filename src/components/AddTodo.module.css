@@ -15,9 +15,10 @@
 }
 
 .button {
-  background-color: #ff8f00;
+  background-color: var(--color-button);
   font-size: 1.4rem;
   padding: 0.2rem;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  color: var(--color-text);
 }

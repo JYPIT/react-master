@@ -1,15 +1,17 @@
-import { useContext } from 'react';
-import { DarkModeContext } from '../context/DarkModeProvider';
 import styles from './Navbar.module.css';
 import { BsSun, BsMoon } from 'react-icons/bs';
+import { useState } from 'react';
 
 export default function Navbar({ children }) {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const [isDark, setIsDark] = useState(false);
+  const handleDarkMode = () => {
+    setIsDark((prev) => !prev);
+  };
   return (
-    <header className={styles.navbar}>
+    <nav className={styles.navbar}>
       {children}
-      <button onClick={toggleDarkMode}>
-        {darkMode ? (
+      <button onClick={handleDarkMode}>
+        {isDark ? (
           <span style={{ fontSize: '20px' }}>
             <BsSun />
           </span>
@@ -23,6 +25,6 @@ export default function Navbar({ children }) {
           </span>
         )}
       </button>
-    </header>
+    </nav>
   );
 }

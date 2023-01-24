@@ -15,11 +15,11 @@ export default function WorkTodo({ todo, onUpdate, onDelete }) {
         <input
           className={styles.checkbox}
           type='checkbox'
-          id='checkbox'
+          id={todo.id}
           checked={status === 'Completed'}
           onChange={handleChange}
         />
-        <label className={styles.text} htmlFor='checkbox'>
+        <label className={styles.text} htmlFor={todo.id}>
           {text}
         </label>
         <span className={styles.icon}>

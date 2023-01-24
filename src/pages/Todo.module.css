@@ -1,9 +1,3 @@
-:root {
-  --color-bg-dark: whitesmoke;
-  --color-text: black;
-  --color-accent: #ffa726;
-}
-
 button {
   outline: none;
   border: none;
@@ -26,7 +20,7 @@ button {
 .todoBox {
   display: flex;
   flex-direction: column;
-  background-color: #fff350;
+  background-color: var(--color-bg);
   width: 20rem;
   height: 25rem;
   border-radius: 1rem;

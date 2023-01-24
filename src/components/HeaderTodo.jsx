@@ -1,18 +1,15 @@
 import { BsSun, BsMoonFill } from 'react-icons/bs';
-import { useState } from 'react';
+import { useDarkMode } from '../context/DarkModeProvider';
 import styles from './HeaderTodo.module.css';
 
 export default function HeaderTodo({ filters, filter, onFilterChange }) {
-  const [isDark, setIsDark] = useState(false);
-  const handleDarkMode = () => {
-    setIsDark((prev) => !prev);
-  };
+  const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <header className={styles.header}>
       <ul className={styles.filters}>
-        <button className={styles.filter} onClick={handleDarkMode}>
-          {isDark ? <BsSun /> : <BsMoonFill />}
+        <button className={styles.filter} onClick={toggleDarkMode}>
+          {darkMode ? <BsMoonFill /> : <BsSun />}
         </button>
         {filters.map((value, index) => (
           <li key={index}>
